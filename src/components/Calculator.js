@@ -89,7 +89,7 @@ export default class Calculator extends Component {
     pressEqual() {
         var result = this.state.result.toString();
         var lastCharacter = result.substr(result.length - 1, 1);
-        if (Number(lastCharacter)) {
+        if (Number(lastCharacter) || lastCharacter === "0") {
             var arrayCharacter = result.split(" ");
             var _length = arrayCharacter.length;
 
